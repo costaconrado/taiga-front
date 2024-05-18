@@ -44,4 +44,6 @@ RUN set -eux; \
     rm source.zip; \
     # Ready for nginx
     mv /taiga/dist/* /usr/share/nginx/html; \
-    rm -rf /taiga
+    rm -rf /taiga; \
+    chown -R nginx:nginx /usr/share/nginx; \
+    chown -R nginx:nginx /var/cache/nginx
